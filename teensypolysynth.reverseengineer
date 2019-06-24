@@ -1,0 +1,17 @@
+lfoenvelope only used onece - amplitude set to 1
+lfo - lfo for voices - set wave and freq. goes into the voice[n]filtermodmixer
+mixer1 - not set in code
+peak1 - set to temppeak, used to help set the pulse width for each voice1-8 a and b or to set detunelfo
+voice[n][a or b] - a and b are voice 1 and 2. set waveform, frequency, pulse width
+voice[n]filterenv - amplitude set with attack and decay time, set from attackTimeFilter amd releaseTimeFilter and sustainLevelFilter depending on the key state - just pressed, pressing and released
+voice[n]env - ampltude set with attack, release time and sustain
+voice[n]mix - mixes the 2 voices a and b together, gain set to mix them
+voice[n]multiply - not set in code
+voice[n]filtermodmixer - sets the gain for lfo input (lfo strenght) and voice[n]filterenv (filter strength)
+voice[n]filter - frequency (cutoff) and resonance set
+first4premix, last4premix - gain for each input set to 0.25
+delayFilter - f and resonance only set in setup
+mainOutMixer - sets gain from feedback
+delay1 - delay set by delay time
+i2s1 - not set in code
+sgtl5000_1 -  volume and lineout levels set
